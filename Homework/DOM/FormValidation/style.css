@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #172033;
+}
+
+.card {
+    width: min(100%, 440px);
+    padding: 28px;
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 14px 35px rgba(23, 32, 51, 0.12);
+}
+
+h1 {
+    margin: 0 0 8px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+label {
+    margin-top: 6px;
+    font-weight: 700;
+}
+
+input,
+button {
+    min-height: 44px;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input {
+    border: 1px solid #c9ced8;
+    padding: 10px 12px;
+}
+
+input:focus {
+    outline: 3px solid rgba(37, 99, 235, 0.2);
+    border-color: #2563eb;
+}
+
+button {
+    margin-top: 12px;
+    border: 0;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+#messages {
+    margin: 18px 0 0;
+    padding-left: 22px;
+    color: #b42318;
+}
+
+#messages.success {
+    padding-left: 0;
+    list-style: none;
+    color: #067647;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz With Timer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="quiz-card">
+        <header>
+            <div>
+                <h1>Frontend quiz</h1>
+                <p>Choose one answer for each question.</p>
+            </div>
+            <strong id="timer" aria-live="polite">01:00</strong>
+        </header>
+
+        <form id="quiz-form">
+            <fieldset data-answer="button">
+                <legend>1. Which element creates a clickable button?</legend>
+                <label><input type="radio" name="question-1" value="input"> &lt;input&gt;</label>
+                <label><input type="radio" name="question-1" value="button"> &lt;button&gt;</label>
+                <label><input type="radio" name="question-1" value="label"> &lt;label&gt;</label>
+            </fieldset>
+
+            <fieldset data-answer="grid">
+                <legend>2. Which CSS value creates a grid layout?</legend>
+                <label><input type="radio" name="question-2" value="block"> display: block</label>
+                <label><input type="radio" name="question-2" value="inline"> display: inline</label>
+                <label><input type="radio" name="question-2" value="grid"> display: grid</label>
+            </fieldset>
+
+            <fieldset data-answer="click">
+                <legend>3. Which event is fired when a button is selected?</legend>
+                <label><input type="radio" name="question-3" value="load"> load</label>
+                <label><input type="radio" name="question-3" value="click"> click</label>
+                <label><input type="radio" name="question-3" value="scroll"> scroll</label>
+            </fieldset>
+
+            <div class="actions">
+                <button type="submit">Submit quiz</button>
+                <button id="restart" type="button">Restart</button>
+            </div>
+        </form>
+
+        <p id="result" aria-live="polite"></p>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
