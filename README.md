@@ -1,208 +1,126 @@
-# 💻 FrontendTasks — Frontend Learning Portfolio
+# Frontend Coursework Archive
 
-<p>
-  <a href="https://code.edu.az/">
-  </a>
-</p>
+This repository contains frontend laboratory work and homework completed during Code Academy training. Existing exercises are preserved as independent projects and organized by task type and topic.
 
-<p>
-  <b>A professional frontend practice repository built for real-world UI development learning.</b><br>
-  Designed for Code Academy students to strengthen frontend fundamentals through hands-on HTML, CSS, and JavaScript tasks.
-</p>
+## Repository structure
 
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000000">
-  <img src="https://img.shields.io/badge/SCSS-CC6699?logo=sass&logoColor=white">
-  <img src="https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white">
-  <img src="https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white">
-</p>
+```text
+.
+├── Labs
+│   ├── Bootstrap
+│   └── HTML
+├── Homework
+│   ├── Bootstrap
+│   ├── CSS
+│   ├── DOM
+│   ├── HTML
+│   └── JavaScript
+├── .gitignore
+└── README.md
+```
 
----
+Folders whose original names contained `Lab` are under `Labs`. All other exercises are under `Homework`.
 
-# 📖 About The Repository
+## Status legend
 
-**FrontendTasks** is a curated collection of frontend-focused exercises and mini-projects created during my frontend engineering journey at **Code Academy**.
-
-The primary goal of this repository is to practice and demonstrate:
-
-- Semantic HTML and page structure
-- CSS layout and responsive design
-- JavaScript fundamentals and DOM interaction
-- Reusable UI patterns
-- Clean, readable frontend code
-- Small, real-world UI implementations
-
-This repository also serves as a professional learning portfolio containing practical implementations of modern frontend techniques.
-
----
-
-# 🧩 Repository Structure
-
-The repository contains multiple independent frontend tasks.  
-Each folder focuses on a specific HTML/CSS/JS concept or layout practice.
-
-## Included Projects
-
-| Project | Description |
+| Status | Meaning |
 |---|---|
-| `HTMLTask001` | Basic HTML page structure practice |
-| `HTMLTask002` | Single-page HTML + CSS styling exercise |
-| `HTMLTask003` | Multi-page layouts (Code Academy, Delivery, Wedding Invitation) |
-| `HTMLTask004` | Layout and styling practice |
-| `HTMLTask005` | CV and product landing page layouts |
-| `HTMLTask006` | Bootstrap-based templates and clinic layout |
-| `HTMLTask007` | HTML/CSS with JavaScript interaction basics |
-| `HTMLTask008` | JavaScript logic practice |
-| `HTMLTask009` | Multiple JS exercises with separate scripts |
-| `HTMLTask010` | Small landing page with styles and JS |
-| `HTMLTask011` | Boxes layout with JS behavior |
-| `HTMLTask012` | Lightweight JS task practice |
-| `HTMLTaskLab` | Mini static pages (Einstein, Apple, Barcelona) |
-| `HTMLTaskLab002` | Bootstrap template with assets folder |
+| Working | No known issue was found during source and local-reference inspection. |
+| Incomplete | The original exercise has a known missing part. |
+| Unchecked | The exercise has not yet received a browser-level review. |
+| Duplicate example | The exercise repeats material that also appears in a larger example. |
 
----
+The status is an archive note, not a full cross-browser certification.
 
-# 🛠️ Technology Stack
+## Labs
 
-## Frontend
-- HTML5
-- CSS3 / SCSS
-- JavaScript (ES6+)
-- Bootstrap
+| Project | Previous folder | Focus | Status |
+|---|---|---|---|
+| [Freelancer Portfolio](Labs/Bootstrap/FreelancerPortfolio/) | `HTMLTaskLab002` | Bootstrap layout, portfolio sections, scroll navigation | Working |
+| [Informational Pages](Labs/HTML/InformationalPages/) | `HTMLTaskLab` | Standalone pages about Albert Einstein, Apple, and FC Barcelona | Working |
 
-## Tooling
-- Netlify (live demos)
-- VS Code Live Server (optional)
+## Homework
 
----
+### HTML and CSS
 
-# 🏗️ Project Structure Overview
+| Project | Previous folder | Focus | Status |
+|---|---|---|---|
+| [Basic Pages](Homework/HTML/BasicPages/) | `HTMLTask001` | HTML structure, registration form, CV page | Working |
+| [Typography Practice](Homework/CSS/TypographyPractice/) | `HTMLTask002` | Fonts and basic styling | Working |
+| [Multi-Page Layouts](Homework/CSS/MultiPageLayouts/) | `HTMLTask003` | Cards, grids, delivery layout, wedding invitation | Working |
+| [Positioning Practice](Homework/CSS/PositioningPractice/) | `HTMLTask004` | CSS positioning | Working |
+| [CV and Hotel Layouts](Homework/CSS/CvAndHotelLayouts/) | `HTMLTask005` | CV and hotel landing-page layouts | Working |
+| [Portfolio and Clinic Layouts](Homework/Bootstrap/PortfolioAndClinicLayouts/) | `HTMLTask006` | Bootstrap portfolio and clinic pages | Incomplete |
 
-Most tasks follow a lightweight structure:
+The portfolio page links to `resume.html` and `projects.html`, but those two pages were not present in the original repository.
 
-```text
-ProjectFolder
- ├── *.html
- ├── *.css
- ├── *.js
- └── assets/ (optional)
-```
+### JavaScript and browser APIs
 
-### Main Objectives
+| Project | Previous folder | Focus | Status |
+|---|---|---|---|
+| [JavaScript Fundamentals](Homework/JavaScript/Fundamentals/) | `HTMLTask007` | Conditions, loops, arrays, prime-number exercise | Duplicate example |
+| [Algorithm Exercises](Homework/JavaScript/AlgorithmExercises/) | `HTMLTask008` | Functions, arrays, reduction, classes, string exercises | Working |
+| [HTTP Request Examples](Homework/JavaScript/HttpRequestExamples/) | `HTMLTask012` | Fetch, Axios, and jQuery AJAX | Working |
+| [List, Sidebar, and Basket](Homework/DOM/ListSidebarAndBasket/) | `HTMLTask009` | DOM creation, sidebar interaction, Local Storage basket | Working |
+| [Basic Calculator](Homework/DOM/BasicCalculator/) | `HTMLTask010` | Input handling and arithmetic operations | Working |
+| [Drag and Drop Boxes](Homework/DOM/DragAndDropBoxes/) | `HTMLTask011` | Drag-and-drop events and validation | Working |
 
-- Build semantic, accessible HTML
-- Practice layout with Flexbox and Grid
-- Improve responsive UI design
-- Learn DOM manipulation and events
-- Organize small frontend projects cleanly
+### Coverage additions
 
----
+These small exercises restore topics that appear in the mentor's frontend labs but were absent from this repository.
 
-# 📚 Learning Roadmap
-
-| Week | Topic | Technologies |
+| Project | Focus | Status |
 |---|---|---|
-| 1 | HTML Foundations | HTML5 |
-| 2 | Styling Basics | CSS3 |
-| 3 | Layout Systems | Flexbox, Grid |
-| 4 | Responsive Design | Media Queries, Bootstrap |
-| 5 | JavaScript Fundamentals | JS Basics |
-| 6 | DOM & Events | DOM API |
-| 7 | UI Components | HTML/CSS/JS |
-| 8 | Review & Labs | Mixed Practice |
+| [Form Validation](Homework/DOM/FormValidation/) | Email, password rules, matching confirmation | Working |
+| [Live Search](Homework/DOM/LiveSearch/) | Input events, filtering, highlighted matches | Working |
+| [Quiz With Timer](Homework/DOM/QuizWithTimer/) | Radio inputs, scoring, countdown, restart | Working |
+| [Stopwatch](Homework/DOM/Stopwatch/) | Start, pause, reset, elapsed time, lap records | Working |
 
----
+## Mentor repository comparison
 
-# ⚙️ Prerequisites
+Frontend topics were compared with [novruzov9/PA201Lab](https://github.com/novruzov9/PA201Lab), focusing on its beginner frontend labs and excluding its backend projects.
 
-Before running the tasks, make sure you have:
+| Mentor area | Coverage in this repository |
+|---|---|
+| Lab 10: HTML content, links, media, tables, and standalone pages | Covered by Basic Pages and Informational Pages |
+| Lab 11: Bootstrap Freelancer-style page | Covered by Freelancer Portfolio |
+| Lab 12: form validation | Added as Form Validation |
+| Lab 12: live search | Added as Live Search |
+| Lab 12: quiz and countdown | Added as Quiz With Timer |
+| Lab 12: timer controls and laps | Added as Stopwatch |
 
-- A modern web browser
-- A code editor (VS Code recommended)
-- Optional: Live Server extension
+The mentor repository also contains larger API-integrated and React/TypeScript applications. Those are intentionally deferred because they are separate, longer project work rather than quick archive organization.
 
----
+## Validation performed
 
-# ▶️ Running The Project
+- Checked 29 HTML files for local `href` and `src` references.
+- Checked the syntax of 13 JavaScript files without executing application behavior.
+- Confirmed that generated dependency and build directories are not stored in the repository.
+- Did not run package installation or a project-wide build because these exercises do not use a package manifest.
+- Did not perform full visual or cross-browser testing.
 
-Open any `.html` file directly in your browser, or use Live Server:
+Several projects load fonts, images, Bootstrap, SweetAlert, Axios, jQuery, or API data from external services and therefore require an internet connection.
 
-```text
-Right click → Open with Live Server
-```
+## Running an exercise
 
----
+Open an HTML file directly in a modern browser. A local static server can also be used, but no package installation is required.
 
-# 🌐 Live Demo With Netlify Platform
+Examples:
 
-### HTMLTask003
-- https://smr-25appsv2.netlify.app/codeacademyoldest
-- https://smr-25appsv2.netlify.app/codeacademyold
-- https://smr-25appsv2.netlify.app/delivery
-- https://smr-25appsv2.netlify.app/weddinginvitation
+- `Labs/Bootstrap/FreelancerPortfolio/index.html`
+- `Homework/DOM/BasicCalculator/index.html`
+- `Homework/DOM/FormValidation/index.html`
 
-### HTMLTask005
-- https://smr-25appsv2.netlify.app/polo
-- https://smr-25appsv2.netlify.app/cv
+## GitHub Pages
 
-### HTMLTask006
-- https://smr-25appsv2.netlify.app/startbootstrap
-- https://smr-25appsv2.netlify.app/clinica
+GitHub Pages can host this repository because the projects are static. The best time to enable it is after this organization branch is merged, because the final URLs depend on the new folder names.
 
-### HTMLTask010
-- https://smr-25appsv2.netlify.app
+A useful deployment should first add a small root `index.html` catalog linking to every exercise, then publish the `main` branch root through GitHub Pages. That deployment and browser review are kept as a separate step so archive organization stays independent from hosting work.
 
-### HTMLTask011
-- https://smr-25appsv2.netlify.app/boxes
+## Deferred larger work
 
----
-
-# 🌱 Recommended Workflow
-
-```text
-1. Fork the repository
-2. Create a feature branch
-3. Implement the task
-4. Commit clean and meaningful changes
-5. Push your branch
-6. Open a Pull Request
-```
-
-### Branch Naming Examples
-
-```bash
-feature/html-layout
-practice/js-dom
-feature/bootstrap-landing
-```
-
----
-
-# ✅ Best Practices Encouraged
-
-Projects are intentionally designed to be extendable.  
-Students are encouraged to improve tasks by adding:
-
-- Responsive improvements
-- Accessibility enhancements
-- Cleaner CSS architecture (BEM)
-- JavaScript validation
-- Reusable components
-- Performance-friendly assets
-- Clean code principles
-
----
-
-# 🔒 License
-
-This repository is intended for educational and portfolio purposes.
-
-Unless otherwise specified, all rights are reserved.
-
----
-
-# ⭐ Final Note
-
-This repository represents my practical frontend development journey and focuses on applying real-world UI principles using modern HTML, CSS, and JavaScript techniques.
+- Recover or rebuild the missing portfolio `resume.html` and `projects.html` pages.
+- Add a root visual catalog and test every link before enabling GitHub Pages.
+- Perform full desktop/mobile browser and responsive-layout review.
+- Recreate the mentor repository's larger API-integrated frontend application, if it belongs in this archive.
+- Add React/TypeScript/Vite coursework as a separate section, if the original local work is available.
