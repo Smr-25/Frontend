@@ -1,10 +1,10 @@
 # Frontend Coursework
 
-A collection of frontend labs and homework created during Code Academy training. The repository contains independent HTML, CSS, Bootstrap, and JavaScript exercises ranging from basic page structure to DOM interactions and browser APIs.
+A collection of frontend labs, homework, and a standalone multi-page project created during Code Academy training. The repository contains independent HTML, CSS, Bootstrap, and JavaScript work ranging from basic page structure to DOM interactions and browser APIs.
 
 [View the live project catalog](https://smr-25.github.io/Frontend/) · [Browse the source code](https://github.com/Smr-25/Frontend)
 
-The live gallery highlights 13 collections with 26 visual pages and mini apps. Focused CSS and console-based JavaScript exercises remain in the repository; they are listed below without presenting code-only pages as visual projects.
+The live gallery highlights 14 collections with 31 visual pages and mini apps. CyberStore has its own featured space; focused CSS and console-based JavaScript exercises remain listed below without presenting code-only pages as visual projects.
 
 ## Overview
 
@@ -12,9 +12,10 @@ The live gallery highlights 13 collections with 26 visual pages and mini apps. F
 |---|---:|
 | Labs | 2 |
 | Homework collections | 16 |
-| Exercise HTML pages | 31 |
-| HTML files including the catalog | 32 |
-| JavaScript files | 14 |
+| Standalone projects | 1 |
+| Project and exercise HTML pages | 36 |
+| HTML files including the catalog | 37 |
+| JavaScript files | 19 |
 
 All exercises are static and require no package installation or build step. Some JavaScript exercises show their results in the browser console rather than on the page.
 
@@ -26,6 +27,8 @@ All exercises are static and require no package installation or build step. Some
 ├── assets
 │   ├── css
 │   └── js
+├── Project
+│   └── CyberStore
 ├── Labs
 │   ├── Bootstrap
 │   └── HTML
@@ -39,7 +42,7 @@ All exercises are static and require no package installation or build step. Some
 └── README.md
 ```
 
-Folders whose task names identify them as labs are stored under `Labs`. The remaining exercises are organized under `Homework` by topic.
+CyberStore lives under `Project` as a standalone site. Folders whose task names identify them as labs are stored under `Labs`; the remaining exercises are organized under `Homework` by topic.
 
 ## Technology stack
 
@@ -57,6 +60,22 @@ Folders whose task names identify them as labs are stored under `Labs`. The rema
 |---|---|
 | Working | The project has no known local file or syntax issue. |
 | Repeated example | The exercise is also included in a larger follow-up task. |
+
+## Featured project
+
+### CyberStore
+
+A five-page storefront frontend with a home page, product shop, cart, wishlist, and contact page. The project is presented as a static website; it does not include a checkout backend.
+
+[Explore the live site](https://smr-25.github.io/Frontend/Project/CyberStore/) · [Browse the source](Project/CyberStore/)
+
+| Page | Live link |
+|---|---|
+| Home | [Open](https://smr-25.github.io/Frontend/Project/CyberStore/) |
+| Shop | [Open](https://smr-25.github.io/Frontend/Project/CyberStore/shop.html) |
+| Cart | [Open](https://smr-25.github.io/Frontend/Project/CyberStore/cart.html) |
+| Wishlist | [Open](https://smr-25.github.io/Frontend/Project/CyberStore/wishlist.html) |
+| Contact | [Open](https://smr-25.github.io/Frontend/Project/CyberStore/contactus.html) |
 
 ## Labs
 

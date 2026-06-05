@@ -187,8 +187,8 @@ main { overflow: hidden; }
 .preview-topline { height: 23px; display: flex; align-items: center; justify-content: space-between; padding: 0 5px; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .preview-topline span:last-child { font-size: 14px; color: var(--accent); }
 .preview-canvas { height: calc(100% - 23px); }
-.preview-canvas, .site-preview { position: relative; overflow: hidden; }
-.preview-canvas iframe, .site-preview iframe {
+.preview-canvas, .site-preview, .featured-preview { position: relative; overflow: hidden; }
+.preview-canvas iframe, .site-preview iframe, .featured-preview iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -264,6 +264,21 @@ main { overflow: hidden; }
 .section-index { color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; }
 .project-section-heading h3 { margin: 12px 0 0; font-size: clamp(42px, 4.5vw, 64px); font-weight: 500; line-height: 0.95; letter-spacing: -0.055em; }
 .project-section-heading p { margin: 0 0 4px; color: var(--muted); font-size: 12px; }
+.featured-card { min-height: 430px; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: 24px; padding: 24px; background: #17252d; color: #fffefa; }
+.featured-preview { min-height: 382px; background: #e6ebef; }
+.featured-preview .preview-label { background: #fffefa; color: #17252d; }
+.featured-body { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(16px, 3.5vw, 48px) clamp(10px, 2.5vw, 34px) clamp(12px, 2.5vw, 32px); }
+.featured-kicker { color: #a6d3e4; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+.featured-body h4 { margin: 18px 0 0; font-size: clamp(43px, 5vw, 72px); font-weight: 500; line-height: 1; letter-spacing: -0.065em; }
+.featured-body h4 span { color: #9acada; }
+.featured-body p { max-width: 420px; margin: 20px 0 28px; color: #cfdbdc; font-size: 14px; line-height: 1.8; }
+.featured-links { width: 100%; margin-top: auto; }
+.featured-primary { min-height: 48px; display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; padding: 0 18px; background: #d8edf2; color: #17252d; font-size: 12px; font-weight: 700; text-decoration: none; transition: background 180ms ease, transform 180ms ease; }
+.featured-primary:hover { background: #fffefa; transform: translateY(-2px); }
+.featured-primary span { font-size: 18px; font-weight: 400; }
+.featured-page-links { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: 24px; }
+.featured-page-links a { padding-bottom: 3px; border-bottom: 1px solid #6a8790; color: #d5e9ed; font-size: 11px; font-weight: 700; text-decoration: none; }
+.featured-page-links a:hover { border-color: #fffefa; color: #fffefa; }
 .site-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 37px 18px; }
 .site-card { min-width: 0; background: var(--white); border: 1px solid #e6e5dd; transition: box-shadow 200ms ease, transform 200ms ease; }
 .site-card:hover { transform: translateY(-4px); box-shadow: 0 20px 45px rgba(30, 45, 35, 0.1); }
@@ -340,6 +355,9 @@ footer > a:last-child:hover { color: var(--accent); }
     .metrics { grid-template-columns: repeat(3, 1fr); gap: 15px; padding-top: 28px; padding-bottom: 28px; }
     .metrics p { grid-column: 1 / -1; justify-self: start; padding: 0; border: 0; }
     .catalog { padding-top: 88px; }
+    .featured-card { grid-template-columns: 1fr; }
+    .featured-preview { min-height: 350px; }
+    .featured-body { padding: 24px 16px 20px; }
     .site-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .closing-note { grid-template-columns: 1fr; gap: 24px; }
@@ -369,6 +387,10 @@ footer > a:last-child:hover { color: var(--accent); }
     .filter-button { padding: 0 10px; }
     #visible-count { width: 100%; text-align: left; padding: 4px 10px; }
     .project-section { padding-top: 58px; }
+    .featured-card { gap: 0; padding: 12px; }
+    .featured-preview { min-height: 225px; }
+    .featured-body { padding: 28px 14px 20px; }
+    .featured-body h4 { font-size: 51px; }
     .site-grid, .app-grid { grid-template-columns: 1fr; }
     .site-preview { aspect-ratio: 1.55; }
     .app-card { min-height: 210px; }
