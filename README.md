@@ -4,17 +4,19 @@ A collection of frontend labs and homework created during Code Academy training.
 
 [View the live project catalog](https://smr-25.github.io/Frontend/) · [Browse the source code](https://github.com/Smr-25/Frontend)
 
+The live gallery highlights 13 collections with 26 visual pages and mini apps. Focused CSS and console-based JavaScript exercises remain in the repository; they are listed below without presenting code-only pages as visual projects.
+
 ## Overview
 
 | Category | Count |
 |---|---:|
 | Labs | 2 |
 | Homework collections | 16 |
-| Runnable exercise pages | 31 |
+| Exercise HTML pages | 31 |
 | HTML files including the catalog | 32 |
 | JavaScript files | 14 |
 
-All exercises are static and can run directly in a browser. No package installation or build step is required.
+All exercises are static and require no package installation or build step. Some JavaScript exercises show their results in the browser console rather than on the page.
 
 ## Repository structure
 
@@ -78,11 +80,13 @@ Folders whose task names identify them as labs are stored under `Labs`. The rema
 
 ### JavaScript
 
-| Project | Focus | Status | Live page |
+| Project | Focus | Status | Code |
 |---|---|---|---|
-| [JavaScript Fundamentals](Homework/JavaScript/Fundamentals/) | Conditions, loops, arrays, prime-number exercise | Repeated example | [Open](https://smr-25.github.io/Frontend/Homework/JavaScript/Fundamentals/) |
-| [Algorithm Exercises](Homework/JavaScript/AlgorithmExercises/) | Functions, arrays, reduction, classes, strings | Working | [Open](https://smr-25.github.io/Frontend/Homework/JavaScript/AlgorithmExercises/) |
-| [HTTP Request Examples](Homework/JavaScript/HttpRequestExamples/) | Fetch, Axios, and jQuery AJAX | Working | [Open](https://smr-25.github.io/Frontend/Homework/JavaScript/HttpRequestExamples/) |
+| [JavaScript Fundamentals](Homework/JavaScript/Fundamentals/) | Conditions, loops, arrays, prime-number exercise | Repeated example | [JavaScript source](Homework/JavaScript/Fundamentals/index.js) |
+| [Algorithm Exercises](Homework/JavaScript/AlgorithmExercises/) | Functions, arrays, reduction, classes, strings | Working | [JavaScript source](Homework/JavaScript/AlgorithmExercises/index.js) |
+| [HTTP Request Examples](Homework/JavaScript/HttpRequestExamples/) | Fetch, Axios, and jQuery AJAX | Working | [JavaScript source](Homework/JavaScript/HttpRequestExamples/script.js) |
+
+These three exercises are designed for source inspection and the browser console, so their HTML launch pages are not featured in the visual gallery.
 
 ### DOM and browser APIs
 
@@ -131,4 +135,4 @@ The repository is published with GitHub Pages from the repository root:
 https://smr-25.github.io/Frontend/
 ```
 
-The root catalog provides search and topic filters and links to every runnable exercise page.
+The root catalog provides search and topic filters for the featured websites and interactive mini apps. This README documents the full archive, including code-only practice.

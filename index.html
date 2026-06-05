@@ -3,224 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A catalog of frontend labs and homework covering HTML, CSS, Bootstrap, JavaScript, and browser APIs.">
-    <title>Frontend Coursework</title>
+    <meta name="description" content="A curated gallery of frontend labs, websites, and interactive homework projects.">
+    <meta name="theme-color" content="#f6f4ef">
+    <title>Frontend Coursework — Project Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/home.css">
 </head>
 <body>
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
-
-    <header class="site-header">
-        <a class="brand" href="#top" aria-label="Frontend coursework home">
-            <span class="brand-mark">&lt;/&gt;</span>
-            <span>Frontend Coursework</span>
+    <header class="site-header" id="top">
+        <a class="brand" href="#top" aria-label="Frontend Coursework home">
+            <span class="brand-mark">F<span>.</span></span>
+            <span class="brand-name">Frontend<br>Coursework</span>
         </a>
         <nav aria-label="Primary navigation">
-            <a href="#labs">Labs</a>
-            <a href="#homework">Homework</a>
-            <a href="./README.md">Documentation</a>
+            <a href="#projects">Projects</a>
+            <a href="#sites">Websites</a>
+            <a href="#apps">Mini apps</a>
         </nav>
+        <a class="header-link" href="https://github.com/Smr-25/Frontend">GitHub <span aria-hidden="true">↗</span></a>
     </header>
 
-    <main id="top">
-        <section class="hero">
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <p class="eyebrow">Learning archive · HTML to browser APIs</p>
-                <h1>Small projects.<br><span>Solid foundations.</span></h1>
-                <p class="hero-text">A browsable collection of frontend laboratories and homework built with HTML, CSS, Bootstrap, JavaScript, DOM events, Local Storage, and HTTP requests.</p>
+                <p class="eyebrow"><span class="eyebrow-line"></span> Frontend project gallery</p>
+                <h1 id="hero-title">Made to <em>learn.</em><br>Built to <em>explore.</em></h1>
+                <p class="hero-text">A collection of websites, layouts, and small interactive projects from my frontend coursework. Open a page, try an app, and explore the work behind each exercise.</p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#projects">Explore projects</a>
-                    <a class="button button-secondary" href="https://github.com/Smr-25/Frontend">View repository</a>
+                    <a class="button button-primary" href="#projects">Explore the projects <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://github.com/Smr-25/Frontend#readme">About the archive <span aria-hidden="true">↗</span></a>
                 </div>
+                <div class="hero-note"><span class="hero-note-dot"></span> Live previews · No setup required</div>
             </div>
-            <div class="code-window" aria-label="Frontend technologies">
-                <div class="window-bar"><span></span><span></span><span></span></div>
-                <pre><code><span class="code-muted">01</span>  <span class="code-blue">const</span> journey = {
-<span class="code-muted">02</span>    labs: <span class="code-green">2</span>,
-<span class="code-muted">03</span>    homework: <span class="code-green">16</span>,
-<span class="code-muted">04</span>    pages: <span class="code-green">31</span>,
-<span class="code-muted">05</span>    stack: [
-<span class="code-muted">06</span>      <span class="code-orange">"HTML"</span>, <span class="code-orange">"CSS"</span>,
-<span class="code-muted">07</span>      <span class="code-orange">"Bootstrap"</span>,
-<span class="code-muted">08</span>      <span class="code-orange">"JavaScript"</span>
-<span class="code-muted">09</span>    ]
-<span class="code-muted">10</span>  };</code></pre>
+            <div class="hero-art" aria-label="Previews of coursework websites">
+                <div class="hero-orbit hero-orbit-one"></div>
+                <div class="hero-orbit hero-orbit-two"></div>
+                <div class="hero-preview hero-preview-main">
+                    <div class="preview-topline"><span>01 / Wedding layout</span><span>↗</span></div>
+                    <div class="preview-canvas">
+                        <iframe src="./Homework/CSS/MultiPageLayouts/wedding-invitation.html" title="Preview of the wedding invitation page" loading="lazy" sandbox="" aria-hidden="true" tabindex="-1"></iframe>
+                    </div>
+                </div>
+                <div class="hero-preview hero-preview-small">
+                    <div class="preview-topline"><span>02 / Portfolio</span><span>↗</span></div>
+                    <div class="preview-canvas">
+                        <iframe src="./Labs/Bootstrap/FreelancerPortfolio/index.html" title="Preview of the freelancer portfolio" loading="lazy" sandbox="" aria-hidden="true" tabindex="-1"></iframe>
+                    </div>
+                </div>
+                <div class="hero-stamp">Explore<br><em>the work.</em></div>
             </div>
         </section>
 
-        <section class="stats" aria-label="Repository statistics">
-            <div><strong>18</strong><span>Project collections</span></div>
-            <div><strong>31</strong><span>Runnable pages</span></div>
-            <div><strong>5</strong><span>Topic groups</span></div>
-            <div><strong>0</strong><span>Build steps</span></div>
-        </section>
+        <div class="metrics" aria-label="Gallery at a glance">
+            <div><strong>13</strong><span>Featured collections</span></div>
+            <div><strong>26</strong><span>Visual pages & apps</span></div>
+            <div><strong>02</strong><span>Lab collections</span></div>
+            <p>From the first HTML page<br>to interactive browser projects.</p>
+        </div>
 
-        <section class="catalog" id="projects">
-            <div class="section-heading">
+        <section class="catalog" id="projects" aria-labelledby="catalog-title">
+            <div class="catalog-intro">
                 <div>
-                    <p class="eyebrow">Project catalog</p>
-                    <h2>Browse the coursework</h2>
+                    <p class="eyebrow"><span class="eyebrow-line"></span> The collection</p>
+                    <h2 id="catalog-title">A little bit of <em>everything.</em></h2>
                 </div>
-                <p id="visible-count" aria-live="polite">18 collections shown</p>
+                <p>Real pages and usable mini apps are featured here. Code-only exercises remain in the repository and are documented in the README.</p>
             </div>
 
             <div class="toolbar">
                 <label class="search-box" for="project-search">
-                    <span aria-hidden="true">⌕</span>
-                    <input id="project-search" type="search" placeholder="Search by project or topic">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input id="project-search" type="search" placeholder="Search projects or topics" autocomplete="off">
                 </label>
-                <div class="filters" aria-label="Filter projects">
-                    <button class="filter-button active" type="button" data-filter="all">All</button>
-                    <button class="filter-button" type="button" data-filter="labs">Labs</button>
-                    <button class="filter-button" type="button" data-filter="html-css">HTML & CSS</button>
-                    <button class="filter-button" type="button" data-filter="javascript">JavaScript</button>
-                    <button class="filter-button" type="button" data-filter="dom">DOM</button>
+                <div class="filters" role="group" aria-label="Filter projects">
+                    <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All work</button>
+                    <button class="filter-button" type="button" data-filter="labs" aria-pressed="false">Labs</button>
+                    <button class="filter-button" type="button" data-filter="sites" aria-pressed="false">Websites</button>
+                    <button class="filter-button" type="button" data-filter="apps" aria-pressed="false">Mini apps</button>
                 </div>
+                <p id="visible-count" aria-live="polite">13 collections</p>
             </div>
 
-            <section class="project-section" id="labs" data-project-section>
-                <div class="project-section-title">
-                    <span>01</span>
-                    <div><p>Laboratory work</p><h2>Labs</h2></div>
+            <section class="project-section" id="sites" data-project-section aria-labelledby="sites-title">
+                <div class="project-section-heading">
+                    <div><span class="section-index">01 / WEB PAGES</span><h3 id="sites-title">Sites & <em>layouts</em></h3></div>
+                    <p>Explore the visual side of the archive.</p>
                 </div>
-                <div class="project-grid">
-                    <article class="project-card feature-card" data-project data-category="labs bootstrap" data-search="freelancer portfolio bootstrap scroll navigation">
-                        <div class="card-number">LAB 01</div>
-                        <h3>Freelancer Portfolio</h3>
-                        <p>A Bootstrap portfolio with navigation, portfolio tiles, about, contact, and scroll interaction.</p>
-                        <ul class="tags"><li>Bootstrap</li><li>CSS</li><li>DOM</li></ul>
-                        <div class="card-actions"><a href="./Labs/Bootstrap/FreelancerPortfolio/index.html">Open project <span>↗</span></a></div>
+                <div class="site-grid">
+                    <article class="site-card" data-project data-category="labs sites" data-search="freelancer portfolio bootstrap scroll navigation">
+                        <div class="site-preview preview-mint"><iframe src="./Labs/Bootstrap/FreelancerPortfolio/index.html" title="Freelancer Portfolio preview" loading="lazy" sandbox="" aria-hidden="true" tabindex="-1"></iframe><span class="preview-label">01 / LAB</span></div>
+                        <div class="site-card-body"><div class="card-meta"><span>Lab · Bootstrap</span><span>01 page</span></div><h4>Freelancer Portfolio</h4><p>A colorful portfolio with navigation, project tiles, an about section, and contact details.</p><div class="card-links"><a class="primary-card-link" href="./Labs/Bootstrap/FreelancerPortfolio/index.html">View website <span aria-hidden="true">↗</span></a></div></div>
                     </article>
-
-                    <article class="project-card feature-card warm" data-project data-category="labs html-css" data-search="informational pages albert einstein apple fc barcelona html">
-                        <div class="card-number">LAB 02</div>
-                        <h3>Informational Pages</h3>
-                        <p>Three standalone, content-rich pages using semantic HTML, media, tables, lists, and inline styling.</p>
-                        <ul class="tags"><li>HTML</li><li>Content</li><li>Media</li></ul>
-                        <div class="card-actions multi">
-                            <a href="./Labs/HTML/InformationalPages/albert-einstein.html">Einstein</a>
-                            <a href="./Labs/HTML/InformationalPages/apple.html">Apple</a>
-                            <a href="./Labs/HTML/InformationalPages/fc-barcelona.html">Barcelona</a>
-                        </div>
+                    <article class="site-card" data-project data-category="labs sites" data-search="informational pages albert einstein apple fc barcelona html">
+                        <div class="site-preview preview-blue"><iframe src="./Labs/HTML/InformationalPages/fc-barcelona.html" title="Informational Pages preview" loading="lazy" sandbox="" aria-hidden="true" tabindex="-1"></iframe><span class="preview-label">02 / LAB</span></div>
+                        <div class="site-card-body"><div class="card-meta"><span>Lab · HTML</span><span>03 pages</span></div><h4>Informational Pages</h4><p>Three content-led pages using semantic HTML, media, tables, and lists.</p><div class="card-links"><a href="./Labs/HTML/InformationalPages/albert-einstein.html">Einstein ↗</a><a href="./Labs/HTML/InformationalPages/apple.html">Apple ↗</a><a href="./Labs/HTML/InformationalPages/fc-barcelona.html">Barcelona ↗</a></div></div>
                     </article>
-                </div>
-            </section>
-
-            <section class="project-section" id="homework" data-project-section>
-                <div class="project-section-title">
-                    <span>02</span>
-                    <div><p>Independent practice</p><h2>Homework</h2></div>
-                </div>
-                <div class="project-grid">
-                    <article class="project-card" data-project data-category="html-css" data-search="basic html pages csharp register form cv">
-                        <div class="card-number">HTML</div><h3>Basic Pages</h3><p>Introductory pages for content structure, a registration form, and a developer CV.</p>
-                        <ul class="tags"><li>HTML</li><li>Forms</li></ul>
-                        <div class="card-actions multi"><a href="./Homework/HTML/BasicPages/csharp-overview.html">Overview</a><a href="./Homework/HTML/BasicPages/registration-form.html">Form</a><a href="./Homework/HTML/BasicPages/developer-cv.html">CV</a></div>
+                    <article class="site-card" data-project data-category="sites homework" data-search="basic html pages csharp registration form developer cv">
+                        <div class="site-preview preview-sand"><iframe src="./Homework/HTML/BasicPages/developer-cv.html" title="Basic Pages preview" loading="lazy" sandbox="" aria-hidden="true" tabindex="-1"></iframe><span class="preview-label">03 / HOMEWORK</span></div>
+                        <div class="site-card-body"><div class="card-meta"><span>Homework · HTML</span><span>03 pages</span></div><h4>Basic Pages</h4><p>Early page-building practice: a topic overview, registration form, and developer CV.</p><div class="card-links"><a href="./Homework/HTML/BasicPages/csharp-overview.html">Overview ↗</a><a href="./Homework/HTML/BasicPages/registration-form.html">Form ↗</a><a href="./Homework/HTML/BasicPages/developer-cv.html">CV ↗</a></div></div>
                     </article>
-
-                    <article class="project-card" data-project data-category="html-css" data-search="typography fonts css">
-                        <div class="card-number">CSS 01</div><h3>Typography Practice</h3><p>Font loading, text presentation, and foundational CSS styling.</p>
-                        <ul class="tags"><li>CSS</li><li>Fonts</li></ul>
-                        <div class="card-actions"><a href="./Homework/CSS/TypographyPractice/index.html">Open project <span>↗</span></a></div>
+                    <article class="site-card" data-project data-category="sites homework" data-search="multi page layouts code academy delivery wedding grid cards">
+                        <div class="site-preview preview-rose"><iframe src="./Homework/CSS/MultiPageLayouts/wedding-invitation.html" title="Multi-Page Layouts preview" loading="lazy" sandbox="" aria-hidden="true" tabindex="-1"></iframe><span class="preview-label">04 / HOMEWORK</span></div>
+                        <div class="site-card-body"><div class="card-meta"><span>Homework · CSS</span><span>04 pages</span></div><h4>Multi-Page Layouts</h4><p>Four takes on visual layout, from cards and service blocks to an invitation.</p><div class="card-links"><a href="./Homework/CSS/MultiPageLayouts/code-academy-features.html">Features ↗</a><a href="./Homework/CSS/MultiPageLayouts/code-academy-categories.html">Categories ↗</a><a href="./Homework/CSS/MultiPageLayouts/delivery-card.html">Delivery ↗</a><a href="./Homework/CSS/MultiPageLayouts/wedding-invitation.html">Wedding ↗</a></div></div>
                     </article>
-
-                    <article class="project-card" data-project data-category="html-css" data-search="multi page layouts code academy delivery wedding grid cards">
-                        <div class="card-number">CSS 02</div><h3>Multi-Page Layouts</h3><p>Four focused layouts covering grids, cards, service blocks, and invitation design.</p>
-                        <ul class="tags"><li>CSS Grid</li><li>Cards</li></ul>
-                        <div class="card-actions multi"><a href="./Homework/CSS/MultiPageLayouts/code-academy-features.html">Features</a><a href="./Homework/CSS/MultiPageLayouts/code-academy-categories.html">Categories</a><a href="./Homework/CSS/MultiPageLayouts/delivery-card.html">Delivery</a><a href="./Homework/CSS/MultiPageLayouts/wedding-invitation.html">Wedding</a></div>
+                    <article class="site-card" data-project data-category="sites homework" data-search="cv hotel layouts landing page css grid flexbox">
+                        <div class="site-preview preview-olive"><iframe src="./Homework/CSS/CvAndHotelLayouts/hotel.html" title="CV and Hotel Layouts preview" loading="lazy" sandbox="" aria-hidden="true" tabindex="-1"></iframe><span class="preview-label">05 / HOMEWORK</span></div>
+                        <div class="site-card-body"><div class="card-meta"><span>Homework · CSS</span><span>02 pages</span></div><h4>CV & Hotel Layouts</h4><p>A clean CV and a visual hotel landing page built with layout fundamentals.</p><div class="card-links"><a href="./Homework/CSS/CvAndHotelLayouts/cv.html">CV ↗</a><a href="./Homework/CSS/CvAndHotelLayouts/hotel.html">Hotel ↗</a></div></div>
                     </article>
-
-                    <article class="project-card" data-project data-category="html-css" data-search="css position positioning practice">
-                        <div class="card-number">CSS 03</div><h3>Positioning Practice</h3><p>A focused exercise for relative, absolute, and layered CSS positioning.</p>
-                        <ul class="tags"><li>CSS</li><li>Position</li></ul>
-                        <div class="card-actions"><a href="./Homework/CSS/PositioningPractice/index.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="html-css" data-search="cv hotel layouts landing page css grid flexbox">
-                        <div class="card-number">CSS 04</div><h3>CV & Hotel Layouts</h3><p>A structured CV and a visual hotel landing page built with reusable layout patterns.</p>
-                        <ul class="tags"><li>Flexbox</li><li>Grid</li></ul>
-                        <div class="card-actions multi"><a href="./Homework/CSS/CvAndHotelLayouts/cv.html">CV</a><a href="./Homework/CSS/CvAndHotelLayouts/hotel.html">Hotel</a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="html-css bootstrap" data-search="portfolio resume projects clinic bootstrap responsive">
-                        <div class="card-number">BOOTSTRAP</div><h3>Portfolio & Clinic</h3><p>A multi-page personal portfolio and a healthcare landing-page concept.</p>
-                        <ul class="tags"><li>Bootstrap</li><li>Multi-page</li></ul>
-                        <div class="card-actions multi"><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/portfolio.html">Portfolio</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/resume.html">Resume</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/projects.html">Projects</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/clinic.html">Clinic</a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript" data-search="javascript fundamentals conditions loops arrays prime number">
-                        <div class="card-number">JS 01</div><h3>JavaScript Fundamentals</h3><p>Small console exercises with conditions, loops, arrays, and number checks.</p>
-                        <ul class="tags"><li>JavaScript</li><li>Loops</li></ul>
-                        <div class="card-actions"><a href="./Homework/JavaScript/Fundamentals/index.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript" data-search="algorithm exercises functions arrays reduce class strings">
-                        <div class="card-number">JS 02</div><h3>Algorithm Exercises</h3><p>Functions and algorithms using arrays, reduction, classes, ranges, and strings.</p>
-                        <ul class="tags"><li>Algorithms</li><li>ES6</li></ul>
-                        <div class="card-actions"><a href="./Homework/JavaScript/AlgorithmExercises/index.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript" data-search="http requests fetch axios jquery ajax api async">
-                        <div class="card-number">JS 03</div><h3>HTTP Request Examples</h3><p>The same public API request demonstrated with Fetch, Axios, and jQuery AJAX.</p>
-                        <ul class="tags"><li>Fetch</li><li>Axios</li><li>AJAX</li></ul>
-                        <div class="card-actions"><a href="./Homework/JavaScript/HttpRequestExamples/index.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript dom" data-search="dom list sidebar basket local storage modal">
-                        <div class="card-number">DOM 01</div><h3>List, Sidebar & Basket</h3><p>Three DOM exercises for element creation, sidebar state, and a Local Storage basket.</p>
-                        <ul class="tags"><li>DOM</li><li>Local Storage</li></ul>
-                        <div class="card-actions multi"><a href="./Homework/DOM/ListSidebarAndBasket/dynamic-list.html">List</a><a href="./Homework/DOM/ListSidebarAndBasket/sidebar.html">Sidebar</a><a href="./Homework/DOM/ListSidebarAndBasket/shopping-basket.html">Basket</a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript dom" data-search="basic calculator arithmetic input events">
-                        <div class="card-number">DOM 02</div><h3>Basic Calculator</h3><p>A compact calculator handling input values and four arithmetic operations.</p>
-                        <ul class="tags"><li>DOM</li><li>Events</li></ul>
-                        <div class="card-actions"><a href="./Homework/DOM/BasicCalculator/index.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript dom" data-search="drag drop boxes validation sweetalert">
-                        <div class="card-number">DOM 03</div><h3>Drag & Drop Boxes</h3><p>Drag-and-drop behavior with destination rules and user feedback.</p>
-                        <ul class="tags"><li>Drag & Drop</li><li>Events</li></ul>
-                        <div class="card-actions"><a href="./Homework/DOM/DragAndDropBoxes/boxes.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript dom" data-search="form validation email password confirmation">
-                        <div class="card-number">DOM 04</div><h3>Form Validation</h3><p>Client-side checks for email, password strength, and password confirmation.</p>
-                        <ul class="tags"><li>Forms</li><li>Validation</li></ul>
-                        <div class="card-actions"><a href="./Homework/DOM/FormValidation/index.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript dom" data-search="live search filter highlight input">
-                        <div class="card-number">DOM 05</div><h3>Live Search</h3><p>Instant topic filtering with highlighted matches and a live result count.</p>
-                        <ul class="tags"><li>Search</li><li>Filtering</li></ul>
-                        <div class="card-actions"><a href="./Homework/DOM/LiveSearch/index.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript dom" data-search="quiz timer countdown score radio">
-                        <div class="card-number">DOM 06</div><h3>Quiz With Timer</h3><p>A timed multiple-choice quiz with scoring, disabled states, and restart support.</p>
-                        <ul class="tags"><li>Timer</li><li>Quiz</li></ul>
-                        <div class="card-actions"><a href="./Homework/DOM/QuizWithTimer/index.html">Open project <span>↗</span></a></div>
-                    </article>
-
-                    <article class="project-card" data-project data-category="javascript dom" data-search="stopwatch start pause reset lap timer interval">
-                        <div class="card-number">DOM 07</div><h3>Stopwatch</h3><p>A stopwatch with start, pause, reset, and lap recording controls.</p>
-                        <ul class="tags"><li>Intervals</li><li>Time</li></ul>
-                        <div class="card-actions"><a href="./Homework/DOM/Stopwatch/index.html">Open project <span>↗</span></a></div>
+                    <article class="site-card" data-project data-category="sites homework" data-search="portfolio resume projects clinic bootstrap responsive">
+                        <div class="site-preview preview-lilac"><iframe src="./Homework/Bootstrap/PortfolioAndClinicLayouts/clinic.html" title="Portfolio and Clinic preview" loading="lazy" sandbox="" aria-hidden="true" tabindex="-1"></iframe><span class="preview-label">06 / HOMEWORK</span></div>
+                        <div class="site-card-body"><div class="card-meta"><span>Homework · Bootstrap</span><span>04 pages</span></div><h4>Portfolio & Clinic</h4><p>A personal portfolio and a healthcare landing page, with supporting pages.</p><div class="card-links"><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/portfolio.html">Portfolio ↗</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/resume.html">Resume ↗</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/projects.html">Projects ↗</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/clinic.html">Clinic ↗</a></div></div>
                     </article>
                 </div>
             </section>
 
-            <p class="empty-state" id="empty-state" hidden>No projects match this search.</p>
+            <section class="project-section apps-section" id="apps" data-project-section aria-labelledby="apps-title">
+                <div class="project-section-heading">
+                    <div><span class="section-index">02 / INTERACTIVE</span><h3 id="apps-title">Small ideas, <em>in action.</em></h3></div>
+                    <p>Open these pages and try the interactions.</p>
+                </div>
+                <div class="app-grid">
+                    <article class="app-card" data-project data-category="apps homework" data-search="dom list sidebar basket local storage modal">
+                        <span class="app-icon icon-list" aria-hidden="true"><i></i><i></i><i></i></span><span class="app-index">01 / DOM</span><h4>List, Sidebar & Basket</h4><p>Dynamic elements, a toggled sidebar, and a basket that remembers items.</p><div class="card-links"><a href="./Homework/DOM/ListSidebarAndBasket/dynamic-list.html">List ↗</a><a href="./Homework/DOM/ListSidebarAndBasket/sidebar.html">Sidebar ↗</a><a href="./Homework/DOM/ListSidebarAndBasket/shopping-basket.html">Basket ↗</a></div>
+                    </article>
+                    <article class="app-card" data-project data-category="apps homework" data-search="basic calculator arithmetic input events">
+                        <span class="app-icon icon-calc" aria-hidden="true">÷</span><span class="app-index">02 / DOM</span><h4>Basic Calculator</h4><p>Four arithmetic operations with simple input handling.</p><div class="card-links"><a class="primary-card-link" href="./Homework/DOM/BasicCalculator/index.html">Try the app <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                    <article class="app-card" data-project data-category="apps homework" data-search="drag drop boxes validation sweetalert">
+                        <span class="app-icon icon-drag" aria-hidden="true">↗</span><span class="app-index">03 / DOM</span><h4>Drag & Drop Boxes</h4><p>Move boxes into matching destinations and get instant feedback.</p><div class="card-links"><a class="primary-card-link" href="./Homework/DOM/DragAndDropBoxes/boxes.html">Try the app <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                    <article class="app-card" data-project data-category="apps homework" data-search="form validation email password confirmation">
+                        <span class="app-icon icon-form" aria-hidden="true">✓</span><span class="app-index">04 / DOM</span><h4>Form Validation</h4><p>Instant checks for email, password strength, and confirmation.</p><div class="card-links"><a class="primary-card-link" href="./Homework/DOM/FormValidation/index.html">Try the app <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                    <article class="app-card" data-project data-category="apps homework" data-search="live search filter highlight input">
+                        <span class="app-icon icon-search" aria-hidden="true">⌕</span><span class="app-index">05 / DOM</span><h4>Live Search</h4><p>Filter topics as you type, with highlighted matches and a result count.</p><div class="card-links"><a class="primary-card-link" href="./Homework/DOM/LiveSearch/index.html">Try the app <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                    <article class="app-card" data-project data-category="apps homework" data-search="quiz timer countdown score radio">
+                        <span class="app-icon icon-quiz" aria-hidden="true">?</span><span class="app-index">06 / DOM</span><h4>Quiz With Timer</h4><p>Timed questions, a score, and a chance to restart.</p><div class="card-links"><a class="primary-card-link" href="./Homework/DOM/QuizWithTimer/index.html">Try the app <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                    <article class="app-card" data-project data-category="apps homework" data-search="stopwatch start pause reset lap timer interval">
+                        <span class="app-icon icon-clock" aria-hidden="true">◷</span><span class="app-index">07 / DOM</span><h4>Stopwatch</h4><p>Start, pause, reset, and save lap times.</p><div class="card-links"><a class="primary-card-link" href="./Homework/DOM/Stopwatch/index.html">Try the app <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                </div>
+            </section>
+            <p class="empty-state" id="empty-state" hidden>No projects match your search. Try another word or filter.</p>
+        </section>
+
+        <section class="closing-note" aria-label="Repository link">
+            <div><p class="eyebrow"><span class="eyebrow-line"></span> Keep exploring</p><h2>There is more<br><em>behind the pages.</em></h2></div>
+            <div><p>The full repository also contains focused typography, positioning, JavaScript fundamentals, algorithms, and HTTP-request exercises.</p><a class="button button-light" href="https://github.com/Smr-25/Frontend">Browse all source code <span aria-hidden="true">↗</span></a></div>
         </section>
     </main>
 
-    <footer>
-        <div><span class="brand-mark">&lt;/&gt;</span><strong>Frontend Coursework</strong></div>
-        <p>Built as a practical learning archive.</p>
-        <a href="#top">Back to top ↑</a>
-    </footer>
-
+    <footer><a class="footer-brand" href="#top">F<span>.</span> <small>Frontend Coursework</small></a><p>Made as a collection of practical learning projects.</p><a href="#top">Back to top ↑</a></footer>
     <script src="./assets/js/home.js"></script>
 </body>
 </html>

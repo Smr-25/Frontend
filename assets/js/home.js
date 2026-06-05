@@ -26,7 +26,7 @@ function updateCatalog() {
         section.hidden = !section.querySelector("[data-project]:not([hidden])");
     });
 
-    visibleCount.textContent = `${count} collection${count === 1 ? "" : "s"} shown`;
+    visibleCount.textContent = `${count} collection${count === 1 ? "" : "s"}`;
     emptyState.hidden = count !== 0;
 }
 
@@ -34,10 +34,13 @@ filterButtons.forEach(function (button) {
     button.addEventListener("click", function () {
         activeFilter = button.dataset.filter;
         filterButtons.forEach(function (item) {
-            item.classList.toggle("active", item === button);
+            const isActive = item === button;
+            item.classList.toggle("active", isActive);
+            item.setAttribute("aria-pressed", String(isActive));
         });
         updateCatalog();
     });
 });
 
 searchInput.addEventListener("input", updateCatalog);
+updateCatalog();
