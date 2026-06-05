@@ -63,7 +63,7 @@ Folders whose task names identify them as labs are stored under `Labs`. The rema
 | Project | Focus | Status | Live pages |
 |---|---|---|---|
 | [Freelancer Portfolio](Labs/Bootstrap/FreelancerPortfolio/) | Bootstrap portfolio, navigation, page sections, scroll interaction | Working | [Open](https://smr-25.github.io/Frontend/Labs/Bootstrap/FreelancerPortfolio/) |
-| [Informational Pages](Labs/HTML/InformationalPages/) | Semantic content, media, tables, lists | Working | [Einstein](https://smr-25.github.io/Frontend/Labs/HTML/InformationalPages/albert-einstein.html) · [Apple](https://smr-25.github.io/Frontend/Labs/HTML/InformationalPages/apple.html) · [Barcelona](https://smr-25.github.io/Frontend/Labs/HTML/InformationalPages/fc-barcelona.html) |
+| [Informational Pages](Labs/HTML/InformationalPages/) | Semantic content, media, tables, lists | Working | [Einstein](https://smr-25.github.io/Frontend/Labs/HTML/InformationalPages/albert-einstein.html) · [Apple](https://smr-25.github.io/Frontend/Labs/HTML/InformationalPages/apple.html) · [Red Bull Racing](https://smr-25.github.io/Frontend/Labs/HTML/InformationalPages/oracle-red-bull-racing.html) |
 
 ## Homework
 

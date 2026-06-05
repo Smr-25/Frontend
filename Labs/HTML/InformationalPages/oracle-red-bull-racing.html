@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An overview of Oracle Red Bull Racing, its Formula 1 achievements, drivers, home base and videos.">
+    <title>Oracle Red Bull Racing | Formula 1</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.035) 25%, transparent 25%) 0 0 / 42px 42px,
+                radial-gradient(circle at 50% 0, #173263 0, #08142f 42%, #050b1c 100%);
+            margin: 0;
+            padding: 40px 10px;
+            color: #14244a;
+        }
+
+        .card {
+            max-width: 980px;
+            margin: 0 auto;
+            background: linear-gradient(140deg, #ffffff 0%, #f3f6fc 57%, #e9eef8 100%);
+            border-radius: 18px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+            padding: 30px 40px 40px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at top left, rgba(19, 48, 108, 0.13), transparent 48%),
+                radial-gradient(circle at bottom right, rgba(231, 33, 39, 0.10), transparent 48%);
+            pointer-events: none;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0c1d43;
+            margin-top: 0;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #4c5e80;
+            margin-bottom: 25px;
+        }
+
+        .logo-wrap {
+            width: min(320px, 100%);
+            margin: 0 auto 28px;
+            padding: 12px 18px;
+            background: #08142f;
+            border: 1px solid #284574;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(12, 29, 67, 0.12);
+        }
+
+        .logo-wrap img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        h3, h4 {
+            color: #0c1d43;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-left: 4px solid #e3242b;
+            padding-left: 10px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #2c3a58;
+            font-size: 0.97rem;
+            margin: 0 0 10px;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            color: #233352;
+        }
+
+        li {
+            padding: 3px 0;
+        }
+
+        ul li::marker {
+            color: #e3242b;
+        }
+
+        ol li::marker {
+            color: #f1b900;
+        }
+
+        a.player-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a.player-link:hover {
+            text-decoration: underline;
+            color: #ffe271;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 10px;
+        }
+
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            border-radius: 12px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 610px;
+            margin: 10px auto 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: linear-gradient(135deg, #132b5b, #07142f);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 18px rgba(8, 20, 47, 0.24);
+            font-size: 0.95rem;
+            color: #f5f8ff;
+        }
+
+        table th,
+        table td {
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        table th {
+            background: linear-gradient(105deg, #103574, #d8242a);
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.7px;
+        }
+
+        table td {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(4px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table tr:hover td {
+            background: rgba(255, 255, 255, 0.14);
+            transition: background 0.2s ease;
+        }
+
+        .video-section {
+            margin-top: 25px;
+        }
+
+        .video-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .video-card {
+            margin: 0;
+            min-width: 0;
+        }
+
+        .video-item {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 25px rgba(8, 20, 47, 0.25);
+            background: #08142f;
+        }
+
+        .video-item iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-card figcaption {
+            margin-top: 10px;
+            color: #243759;
+            font-size: 0.83rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .video-card a, .source-links a {
+            color: #ae1924;
+            text-underline-offset: 3px;
+        }
+
+        .source-links {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid #d6deeb;
+            font-size: 0.82rem;
+        }
+
+        @media (max-width: 900px) {
+            .video-wrapper {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .card {
+                padding: 22px 18px 26px;
+            }
+
+            .grid,
+            .extra-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            .logo-wrap {
+                width: min(290px, 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h1>Oracle Red Bull Racing</h1>
+            <p class="subtitle">Milton Keynes · Formula 1 since 2005 · Built to race</p>
+
+            <div class="logo-wrap">
+                <img src="./oracle-red-bull-racing-logo.svg"
+                     alt="Oracle Red Bull Racing team logo"
+                     width="276" height="67">
+            </div>
+
+            <h3>About Oracle Red Bull Racing</h3>
+            <p>Oracle Red Bull Racing is a Formula 1 team based in Milton Keynes, United Kingdom. The team began racing under the Red Bull name in 2005 and developed into one of the sport’s most successful constructors.</p>
+            <p>From Sebastian Vettel’s four-title run to Max Verstappen’s championship years, the team’s story has been shaped by bold car design, fast race execution and a constant search for performance. The 2026 RB22 begins a new chapter with a Red Bull Ford power unit.</p>
+
+            <div class="grid">
+                <div>
+                    <h4>Achievements</h4>
+                    <ul>
+                        <li>6 Constructors’ Championships: 2010–2013 and 2022–2023</li>
+                        <li>8 Drivers’ Championships with Vettel and Verstappen</li>
+                        <li>First Grand Prix victory: China, 2009</li>
+                        <li>The RB19 delivered a record-setting 2023 season</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Home Base</h4>
+                    <p>Instead of a stadium, a Formula 1 team has a factory and technology campus. Red Bull Racing designs, builds and prepares its cars in Milton Keynes before taking them to circuits around the world.</p>
+                    <ul>
+                        <li>Red Bull Technology Campus</li>
+                        <li>Milton Keynes, United Kingdom</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="extra-grid">
+                <div>
+                    <h4>Racing Approach</h4>
+                    <p>Aerodynamics, engineering, strategy and pit crew precision all matter in Formula 1. The team’s 2026 car and power unit are developed together at its Milton Keynes campus.</p>
+                </div>
+                <div>
+                    <h4>On-Track Battles</h4>
+                    <p>Every Grand Prix is a contest of pace and decisions. Red Bull Racing’s championship campaigns have included close battles against teams such as Ferrari, Mercedes and McLaren.</p>
+                </div>
+            </div>
+
+            <h4>Notable Drivers – Red Bull Racing Years</h4>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Driver</th>
+                            <th>Notable contribution</th>
+                            <th>Years with the team</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="player-link" href="https://www.formula1.com/en/drivers/hall-of-fame/Sebastian_Vettel.html" target="_blank" rel="noopener noreferrer">Sebastian Vettel</a></td>
+                            <td>Four consecutive Drivers’ Championships, 2010–2013</td>
+                            <td>2009–2014</td>
+                        </tr>
+                        <tr>
+                            <td><a class="player-link" href="https://www.formula1.com/en/drivers/max-verstappen" target="_blank" rel="noopener noreferrer">Max Verstappen</a></td>
+                            <td>Four consecutive Drivers’ Championships, 2021–2024</td>
+                            <td>2016–present</td>
+                        </tr>
+                        <tr>
+                            <td><a class="player-link" href="https://www.formula1.com/en/latest/article/rise-of-the-rookie-mark-webbers-journey-from-dirt-bike-rider-to-f1.5unqrnEBinuZAUIT8RTAGd" target="_blank" rel="noopener noreferrer">Mark Webber</a></td>
+                            <td>Race-winning driver during the first title era</td>
+                            <td>2007–2013</td>
+                        </tr>
+                        <tr>
+                            <td><a class="player-link" href="https://www.formula1.com/en/drivers/daniel-ricciardo" target="_blank" rel="noopener noreferrer">Daniel Ricciardo</a></td>
+                            <td>Multiple Grand Prix wins in the hybrid era</td>
+                            <td>2014–2018</td>
+                        </tr>
+                        <tr>
+                            <td><a class="player-link" href="https://www.formula1.com/en/drivers/sergio-perez" target="_blank" rel="noopener noreferrer">Sergio Pérez</a></td>
+                            <td>Key points and wins in the 2022–2023 team titles</td>
+                            <td>2021–2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="video-section">
+                <h4>Team Videos</h4>
+                <p>Explore the RB22 on track, the craft of a pit stop and life behind the scenes:</p>
+                <div class="video-wrapper">
+                    <figure class="video-card">
+                        <div class="video-item">
+                            <iframe src="https://www.youtube-nocookie.com/embed/wIpUxy3GVXA"
+                                    title="Oracle Red Bull Racing RB22 on track in 2026"
+                                    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>RB22 on track · <a href="https://www.youtube.com/watch?v=wIpUxy3GVXA" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption>
+                    </figure>
+                    <figure class="video-card">
+                        <div class="video-item">
+                            <iframe src="https://www.youtube-nocookie.com/embed/5Gcphwsp3uU"
+                                    title="How Red Bull Racing prepares a Formula 1 pit stop"
+                                    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>The perfect pit stop · <a href="https://www.youtube.com/watch?v=5Gcphwsp3uU" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption>
+                    </figure>
+                    <figure class="video-card">
+                        <div class="video-item">
+                            <iframe src="https://www.youtube-nocookie.com/embed/cTlkH5KDI0g"
+                                    title="Behind the Charge: preparing for a Formula 1 season"
+                                    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>Behind the Charge · <a href="https://www.youtube.com/watch?v=cTlkH5KDI0g" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <p class="source-links">Explore more: <a href="https://www.redbullracing.com/int-en/about" target="_blank" rel="noopener noreferrer">Team history</a> · <a href="https://www.formula1.com/en/teams/red-bull-racing" target="_blank" rel="noopener noreferrer">Formula 1 team profile</a></p>
+        </div>
+    </div>
+</body>
+</html>

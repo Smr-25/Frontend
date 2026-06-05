@@ -47,14 +47,37 @@ button { cursor: pointer; }
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--ink);
-    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: var(--ink);
+    color: var(--white);
+    border-radius: 13px 13px 13px 3px;
     font-family: var(--serif);
-    font-size: 30px;
+    font-size: 34px;
+    font-style: italic;
     line-height: 1;
-    letter-spacing: -0.06em;
+    letter-spacing: -0.08em;
 }
-.brand-mark span, .footer-brand > span { color: var(--accent); }
+.brand-mark::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 1px;
+    left: -12px;
+    bottom: 10px;
+    background: #e6af90;
+    transform: rotate(-42deg);
+}
+.brand-mark-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    right: 7px;
+    top: 7px;
+    border-radius: 50%;
+    background: #e6af90;
+}
 .brand-name { font-size: 12px; font-weight: 700; line-height: 1.16; letter-spacing: -0.025em; }
 .site-header nav { display: flex; align-items: center; gap: 35px; }
 .site-header nav a, .header-link {
@@ -291,8 +314,10 @@ main { overflow: hidden; }
 .button-light { background: var(--white); color: var(--ink); }
 .button-light:hover { background: #e6eee5; }
 footer { max-width: 1440px; min-height: 125px; margin: 0 auto; padding: 30px 5%; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
-.footer-brand { display: flex; align-items: baseline; gap: 3px; font: 30px/1 var(--serif); }
-.footer-brand small { margin-left: 12px; font: 700 11px/1.2 var(--sans); }
+.footer-brand { display: flex; align-items: center; gap: 12px; }
+.footer-brand .brand-mark { width: 36px; height: 36px; border-radius: 10px 10px 10px 3px; font-size: 27px; }
+.footer-brand .brand-mark-dot { width: 5px; height: 5px; right: 5px; top: 5px; }
+.footer-brand small { font: 700 11px/1.2 var(--sans); }
 footer p, footer > a:last-child { color: var(--muted); font-size: 11px; }
 footer > a:last-child { text-decoration: none; }
 footer > a:last-child:hover { color: var(--accent); }
