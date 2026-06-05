@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A catalog of frontend labs and homework covering HTML, CSS, Bootstrap, JavaScript, and browser APIs.">
+    <title>Frontend Coursework</title>
+    <link rel="stylesheet" href="./assets/css/home.css">
+</head>
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Frontend coursework home">
+            <span class="brand-mark">&lt;/&gt;</span>
+            <span>Frontend Coursework</span>
+        </a>
+        <nav aria-label="Primary navigation">
+            <a href="#labs">Labs</a>
+            <a href="#homework">Homework</a>
+            <a href="./README.md">Documentation</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Learning archive · HTML to browser APIs</p>
+                <h1>Small projects.<br><span>Solid foundations.</span></h1>
+                <p class="hero-text">A browsable collection of frontend laboratories and homework built with HTML, CSS, Bootstrap, JavaScript, DOM events, Local Storage, and HTTP requests.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">Explore projects</a>
+                    <a class="button button-secondary" href="https://github.com/Smr-25/Frontend">View repository</a>
+                </div>
+            </div>
+            <div class="code-window" aria-label="Frontend technologies">
+                <div class="window-bar"><span></span><span></span><span></span></div>
+                <pre><code><span class="code-muted">01</span>  <span class="code-blue">const</span> journey = {
+<span class="code-muted">02</span>    labs: <span class="code-green">2</span>,
+<span class="code-muted">03</span>    homework: <span class="code-green">16</span>,
+<span class="code-muted">04</span>    pages: <span class="code-green">31</span>,
+<span class="code-muted">05</span>    stack: [
+<span class="code-muted">06</span>      <span class="code-orange">"HTML"</span>, <span class="code-orange">"CSS"</span>,
+<span class="code-muted">07</span>      <span class="code-orange">"Bootstrap"</span>,
+<span class="code-muted">08</span>      <span class="code-orange">"JavaScript"</span>
+<span class="code-muted">09</span>    ]
+<span class="code-muted">10</span>  };</code></pre>
+            </div>
+        </section>
+
+        <section class="stats" aria-label="Repository statistics">
+            <div><strong>18</strong><span>Project collections</span></div>
+            <div><strong>31</strong><span>Runnable pages</span></div>
+            <div><strong>5</strong><span>Topic groups</span></div>
+            <div><strong>0</strong><span>Build steps</span></div>
+        </section>
+
+        <section class="catalog" id="projects">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Project catalog</p>
+                    <h2>Browse the coursework</h2>
+                </div>
+                <p id="visible-count" aria-live="polite">18 collections shown</p>
+            </div>
+
+            <div class="toolbar">
+                <label class="search-box" for="project-search">
+                    <span aria-hidden="true">⌕</span>
+                    <input id="project-search" type="search" placeholder="Search by project or topic">
+                </label>
+                <div class="filters" aria-label="Filter projects">
+                    <button class="filter-button active" type="button" data-filter="all">All</button>
+                    <button class="filter-button" type="button" data-filter="labs">Labs</button>
+                    <button class="filter-button" type="button" data-filter="html-css">HTML & CSS</button>
+                    <button class="filter-button" type="button" data-filter="javascript">JavaScript</button>
+                    <button class="filter-button" type="button" data-filter="dom">DOM</button>
+                </div>
+            </div>
+
+            <section class="project-section" id="labs" data-project-section>
+                <div class="project-section-title">
+                    <span>01</span>
+                    <div><p>Laboratory work</p><h2>Labs</h2></div>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card feature-card" data-project data-category="labs bootstrap" data-search="freelancer portfolio bootstrap scroll navigation">
+                        <div class="card-number">LAB 01</div>
+                        <h3>Freelancer Portfolio</h3>
+                        <p>A Bootstrap portfolio with navigation, portfolio tiles, about, contact, and scroll interaction.</p>
+                        <ul class="tags"><li>Bootstrap</li><li>CSS</li><li>DOM</li></ul>
+                        <div class="card-actions"><a href="./Labs/Bootstrap/FreelancerPortfolio/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card feature-card warm" data-project data-category="labs html-css" data-search="informational pages albert einstein apple fc barcelona html">
+                        <div class="card-number">LAB 02</div>
+                        <h3>Informational Pages</h3>
+                        <p>Three standalone, content-rich pages using semantic HTML, media, tables, lists, and inline styling.</p>
+                        <ul class="tags"><li>HTML</li><li>Content</li><li>Media</li></ul>
+                        <div class="card-actions multi">
+                            <a href="./Labs/HTML/InformationalPages/albert-einstein.html">Einstein</a>
+                            <a href="./Labs/HTML/InformationalPages/apple.html">Apple</a>
+                            <a href="./Labs/HTML/InformationalPages/fc-barcelona.html">Barcelona</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="project-section" id="homework" data-project-section>
+                <div class="project-section-title">
+                    <span>02</span>
+                    <div><p>Independent practice</p><h2>Homework</h2></div>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card" data-project data-category="html-css" data-search="basic html pages csharp register form cv">
+                        <div class="card-number">HTML</div><h3>Basic Pages</h3><p>Introductory pages for content structure, a registration form, and a developer CV.</p>
+                        <ul class="tags"><li>HTML</li><li>Forms</li></ul>
+                        <div class="card-actions multi"><a href="./Homework/HTML/BasicPages/csharp-overview.html">Overview</a><a href="./Homework/HTML/BasicPages/registration-form.html">Form</a><a href="./Homework/HTML/BasicPages/developer-cv.html">CV</a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="html-css" data-search="typography fonts css">
+                        <div class="card-number">CSS 01</div><h3>Typography Practice</h3><p>Font loading, text presentation, and foundational CSS styling.</p>
+                        <ul class="tags"><li>CSS</li><li>Fonts</li></ul>
+                        <div class="card-actions"><a href="./Homework/CSS/TypographyPractice/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="html-css" data-search="multi page layouts code academy delivery wedding grid cards">
+                        <div class="card-number">CSS 02</div><h3>Multi-Page Layouts</h3><p>Four focused layouts covering grids, cards, service blocks, and invitation design.</p>
+                        <ul class="tags"><li>CSS Grid</li><li>Cards</li></ul>
+                        <div class="card-actions multi"><a href="./Homework/CSS/MultiPageLayouts/code-academy-features.html">Features</a><a href="./Homework/CSS/MultiPageLayouts/code-academy-categories.html">Categories</a><a href="./Homework/CSS/MultiPageLayouts/delivery-card.html">Delivery</a><a href="./Homework/CSS/MultiPageLayouts/wedding-invitation.html">Wedding</a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="html-css" data-search="css position positioning practice">
+                        <div class="card-number">CSS 03</div><h3>Positioning Practice</h3><p>A focused exercise for relative, absolute, and layered CSS positioning.</p>
+                        <ul class="tags"><li>CSS</li><li>Position</li></ul>
+                        <div class="card-actions"><a href="./Homework/CSS/PositioningPractice/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="html-css" data-search="cv hotel layouts landing page css grid flexbox">
+                        <div class="card-number">CSS 04</div><h3>CV & Hotel Layouts</h3><p>A structured CV and a visual hotel landing page built with reusable layout patterns.</p>
+                        <ul class="tags"><li>Flexbox</li><li>Grid</li></ul>
+                        <div class="card-actions multi"><a href="./Homework/CSS/CvAndHotelLayouts/cv.html">CV</a><a href="./Homework/CSS/CvAndHotelLayouts/hotel.html">Hotel</a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="html-css bootstrap" data-search="portfolio resume projects clinic bootstrap responsive">
+                        <div class="card-number">BOOTSTRAP</div><h3>Portfolio & Clinic</h3><p>A multi-page personal portfolio and a healthcare landing-page concept.</p>
+                        <ul class="tags"><li>Bootstrap</li><li>Multi-page</li></ul>
+                        <div class="card-actions multi"><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/portfolio.html">Portfolio</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/resume.html">Resume</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/projects.html">Projects</a><a href="./Homework/Bootstrap/PortfolioAndClinicLayouts/clinic.html">Clinic</a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript" data-search="javascript fundamentals conditions loops arrays prime number">
+                        <div class="card-number">JS 01</div><h3>JavaScript Fundamentals</h3><p>Small console exercises with conditions, loops, arrays, and number checks.</p>
+                        <ul class="tags"><li>JavaScript</li><li>Loops</li></ul>
+                        <div class="card-actions"><a href="./Homework/JavaScript/Fundamentals/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript" data-search="algorithm exercises functions arrays reduce class strings">
+                        <div class="card-number">JS 02</div><h3>Algorithm Exercises</h3><p>Functions and algorithms using arrays, reduction, classes, ranges, and strings.</p>
+                        <ul class="tags"><li>Algorithms</li><li>ES6</li></ul>
+                        <div class="card-actions"><a href="./Homework/JavaScript/AlgorithmExercises/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript" data-search="http requests fetch axios jquery ajax api async">
+                        <div class="card-number">JS 03</div><h3>HTTP Request Examples</h3><p>The same public API request demonstrated with Fetch, Axios, and jQuery AJAX.</p>
+                        <ul class="tags"><li>Fetch</li><li>Axios</li><li>AJAX</li></ul>
+                        <div class="card-actions"><a href="./Homework/JavaScript/HttpRequestExamples/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript dom" data-search="dom list sidebar basket local storage modal">
+                        <div class="card-number">DOM 01</div><h3>List, Sidebar & Basket</h3><p>Three DOM exercises for element creation, sidebar state, and a Local Storage basket.</p>
+                        <ul class="tags"><li>DOM</li><li>Local Storage</li></ul>
+                        <div class="card-actions multi"><a href="./Homework/DOM/ListSidebarAndBasket/dynamic-list.html">List</a><a href="./Homework/DOM/ListSidebarAndBasket/sidebar.html">Sidebar</a><a href="./Homework/DOM/ListSidebarAndBasket/shopping-basket.html">Basket</a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript dom" data-search="basic calculator arithmetic input events">
+                        <div class="card-number">DOM 02</div><h3>Basic Calculator</h3><p>A compact calculator handling input values and four arithmetic operations.</p>
+                        <ul class="tags"><li>DOM</li><li>Events</li></ul>
+                        <div class="card-actions"><a href="./Homework/DOM/BasicCalculator/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript dom" data-search="drag drop boxes validation sweetalert">
+                        <div class="card-number">DOM 03</div><h3>Drag & Drop Boxes</h3><p>Drag-and-drop behavior with destination rules and user feedback.</p>
+                        <ul class="tags"><li>Drag & Drop</li><li>Events</li></ul>
+                        <div class="card-actions"><a href="./Homework/DOM/DragAndDropBoxes/boxes.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript dom" data-search="form validation email password confirmation">
+                        <div class="card-number">DOM 04</div><h3>Form Validation</h3><p>Client-side checks for email, password strength, and password confirmation.</p>
+                        <ul class="tags"><li>Forms</li><li>Validation</li></ul>
+                        <div class="card-actions"><a href="./Homework/DOM/FormValidation/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript dom" data-search="live search filter highlight input">
+                        <div class="card-number">DOM 05</div><h3>Live Search</h3><p>Instant topic filtering with highlighted matches and a live result count.</p>
+                        <ul class="tags"><li>Search</li><li>Filtering</li></ul>
+                        <div class="card-actions"><a href="./Homework/DOM/LiveSearch/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript dom" data-search="quiz timer countdown score radio">
+                        <div class="card-number">DOM 06</div><h3>Quiz With Timer</h3><p>A timed multiple-choice quiz with scoring, disabled states, and restart support.</p>
+                        <ul class="tags"><li>Timer</li><li>Quiz</li></ul>
+                        <div class="card-actions"><a href="./Homework/DOM/QuizWithTimer/index.html">Open project <span>↗</span></a></div>
+                    </article>
+
+                    <article class="project-card" data-project data-category="javascript dom" data-search="stopwatch start pause reset lap timer interval">
+                        <div class="card-number">DOM 07</div><h3>Stopwatch</h3><p>A stopwatch with start, pause, reset, and lap recording controls.</p>
+                        <ul class="tags"><li>Intervals</li><li>Time</li></ul>
+                        <div class="card-actions"><a href="./Homework/DOM/Stopwatch/index.html">Open project <span>↗</span></a></div>
+                    </article>
+                </div>
+            </section>
+
+            <p class="empty-state" id="empty-state" hidden>No projects match this search.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div><span class="brand-mark">&lt;/&gt;</span><strong>Frontend Coursework</strong></div>
+        <p>Built as a practical learning archive.</p>
+        <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="./assets/js/home.js"></script>
+</body>
+</html>
