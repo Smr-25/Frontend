@@ -1,0 +1,16 @@
+p{
+    color: red;
+    font-family: "Stack Sans Notch", sans-serif;
+
+}
+.stack-sans-notch-font {
+    font-family: "Stack Sans Notch", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 2;
+    font-style: normal;
+  }
+  .icon-apple{
+    width: 200px;
+    height: 200px;
+  }
+  

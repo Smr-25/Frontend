@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Barcelona</title>
+    <style>
+        /* Page background & global style */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: radial-gradient(circle at top, #003366 0, #000 55%, #111 100%);
+            margin: 0;
+            padding: 40px 10px;
+            color: #f4f4f4;
+        }
+
+        /* Centered card container */
+        .card {
+            max-width: 980px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5ff 50%, #ffe6e6 100%);
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            padding: 30px 40px 40px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Light gradient overlay */
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at top left, rgba(0,51,102,0.18), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(128,0,32,0.18), transparent 55%);
+            pointer-events: none;
+        }
+
+        /* Keep content above overlay */
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+            margin-top: 0;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 25px;
+            filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
+        }
+
+        h3, h4 {
+            color: #222;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-left: 4px solid #003366;
+            padding-left: 10px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #333;
+            font-size: 0.97rem;
+            margin: 0 0 10px;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            color: #222;
+        }
+
+        li {
+            padding: 3px 0;
+        }
+
+        ul li::marker {
+            color: #800020; /* bordo */
+        }
+
+        ol li::marker {
+            color: #003366;
+        }
+
+        /* Link style for famous players */
+        a.player-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a.player-link:hover {
+            text-decoration: underline;
+            color: #800020;
+        }
+
+        /* Grid sections */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 10px;
+        }
+
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        /* Table background same style as header/background */
+        table {
+            width: 100%;
+            margin: 10px auto 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: radial-gradient(circle at top, #003366 0, #000 60%, #111 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.40);
+            font-size: 0.95rem;
+            color: #f4f4f4;
+        }
+
+        /* inner wrapper effect for cells */
+        table th,
+        table td {
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        table th {
+            background: linear-gradient(135deg, #003366, #800020);
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.7px;
+        }
+
+        table td {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(4px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table tr:hover td {
+            background: rgba(255, 255, 255, 0.14);
+            transition: background 0.2s ease;
+        }
+
+        /* Video section */
+        .video-section {
+            margin-top: 25px;
+        }
+
+        .video-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .video-item {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+            background: #000;
+        }
+
+        .video-item iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 900px) {
+            .video-wrapper {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .card {
+                padding: 22px 18px 26px;
+            }
+
+            .grid,
+            .extra-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+
+            img {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <h1>FC Barcelona</h1>
+            <p class="subtitle">Més que un club – one of the most famous football clubs in the world since 1899</p>
+
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+                 alt="FC Barcelona Logo"
+                 width="180">
+
+            <h3>About FC Barcelona</h3>
+            <p>FC Barcelona, commonly referred to as Barça, is a professional football club based in Barcelona, Catalonia, Spain. Founded in 1899 by a group of Swiss, English, and Catalan footballers led by Joan Gamper, the club has become one of the most successful and popular football teams in the world.</p>
+            <p>The club is not only a football team, but also a symbol of the city and of Catalonia. Barcelona is known for its attacking style of play, its famous La Masia academy, and for producing world-class players who have shaped modern football.</p>
+
+            <div class="grid">
+                <div>
+                    <h4>Achievements</h4>
+                    <ul>
+                        <li>La Liga titles: 26</li>
+                        <li>Copa del Rey titles: 31</li>
+                        <li>UEFA Champions League titles: 5</li>
+                        <li>FIFA Club World Cup titles: 3</li>
+                    </ul>
+                </div>
+
+                <div>
+                   
+                    <h4>Stadium</h4>
+                    <p>Camp Nou, currently known as Spotify Camp Nou for sponsorship reasons, is one of the largest stadiums in Europe and has been the home of FC Barcelona fans for many decades.</p>
+                    <ul>
+                        <li>Camp Nou</li>
+                        <li>Spotify Camp Nou (sponsored name)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="extra-grid">
+                <div>
+                    <h4>Playing Style</h4>
+                    <p>For many years, Barcelona has been famous for its tiki-taka style: short passes, quick movement, and high ball possession. This philosophy reached its peak under Pep Guardiola, when Barça dominated both Spain and Europe.</p>
+                </div>
+                <div>
+                    <h4>Rivalry</h4>
+                    <p>The rivalry with Real Madrid, known as “El Clásico”, is one of the biggest and most passionate rivalries in football history. These matches are important not only from a sporting point of view, but also culturally and historically.</p>
+                </div>
+            </div>
+
+            <h4>Famous Players – Titles with FC Barcelona</h4>
+            <table>
+                <tr>
+                    <th>Player</th>
+                    <th>Main titles with Barça</th>
+                    <th>Years at the club</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="player-link" href="https://en.wikipedia.org/wiki/Lionel_Messi" target="_blank">
+                            Lionel Messi
+                        </a>
+                    </td>
+                    <td>10× La Liga, 7× Copa del Rey, 4× UEFA Champions League</td>
+                    <td>2004 – 2021</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="player-link" href="https://en.wikipedia.org/wiki/Xavi" target="_blank">
+                            Xavi Hernández
+                        </a>
+                    </td>
+                    <td>8× La Liga, 3× Copa del Rey, 4× UEFA Champions League</td>
+                    <td>1998 – 2015</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="player-link" href="https://en.wikipedia.org/wiki/Andr%C3%A9s_Iniesta" target="_blank">
+                            Andrés Iniesta
+                        </a>
+                    </td>
+                    <td>9× La Liga, 6× Copa del Rey, 4× UEFA Champions League</td>
+                    <td>2002 – 2018</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="player-link" href="https://en.wikipedia.org/wiki/Ronaldinho" target="_blank">
+                            Ronaldinho
+                        </a>
+                    </td>
+                    <td>2× La Liga, 1× UEFA Champions League</td>
+                    <td>2003 – 2008</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="player-link" href="https://en.wikipedia.org/wiki/Johan_Cruyff" target="_blank">
+                            Johan Cruyff
+                        </a>
+                    </td>
+                    <td>1× La Liga, 1× Copa del Rey (as player); 4× La Liga, 1× European Cup (as coach)</td>
+                    <td>1973 – 1978 (player), 1988 – 1996 (coach)</td>
+                </tr>
+            </table>
+
+            <div class="video-section">
+                <h4>Highlight Videos</h4>
+                <p>Watch some highlight videos related to FC Barcelona below:</p>
+                <div class="video-wrapper">
+                    <div class="video-item">
+                        <iframe
+                            src="https://www.youtube.com/embed/Md7P9X4SFck?si=0TGujkoAGhjwOOnb"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe
+                            src="https://www.youtube.com/embed/AlXgSXIpchc?si=nkO-y3Dbs9TBfrBC"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe
+                            src="https://www.youtube.com/embed/fVufY4SCoOk?si=R07gtl9bM7f69J_X"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Einstein</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 15px;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at 20% 20%, #38bdf8, #0f172a 60%, #020617);
+            color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page-container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .card {
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 18px;
+            padding: 24px 22px 28px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            backdrop-filter: blur(12px);
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 14px;
+            max-width: 220px;
+            width: 100%;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+        }
+
+        h1 {
+            text-align: center;
+            color: #e0f2fe;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #93c5fd;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #c4b5fd;
+            margin-top: 24px;
+            border-left: 4px solid #6366f1;
+            padding-left: 10px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #e5e7eb;
+            font-size: 0.96rem;
+            margin: 10px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul li {
+            color: #6ee7b7;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .quote {
+            margin-top: 18px;
+            padding: 10px 14px;
+            border-left: 3px solid #facc15;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 10px;
+            font-style: italic;
+            color: #fef9c3;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 18px 16px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Albert Einstein">
+
+            <h1>Albert Einstein</h1>
+            <div class="subtitle">Theoretical physicist • Nobel laureate • Father of modern physics</div>
+
+            <h2>Biography</h2>
+            <p>
+                Albert Einstein (1879–1955) was a German-born theoretical physicist, widely acknowledged as one of the greatest and most influential physicists of all time.
+                He is best known for developing the theory of relativity and the famous equation E = mc².
+            </p>
+
+            <h2>Major Contributions</h2>
+            <ul>
+                <li>Theory of Special Relativity (1905)</li>
+                <li>General Theory of Relativity (1915)</li>
+                <li>Photoelectric Effect (Nobel Prize, 1921)</li>
+                <li>Brownian Motion and foundational work in quantum theory</li>
+            </ul>
+
+            <div class="quote">
+                “Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world.”
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+   /* General */
+   body {
+    margin: 0;
+    padding-top: 150px; /* header height */
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: #1abc9c;
+    color: white !important;
+}
+
+.nav-link.active {
+    background-color: #1abc9c;
+    color: white !important;
+}
+
+/* Main Section */
+.main {
+    background-color: aquamarine;
+    height: 700px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+.main-content img {
+    width: 250px;
+    height: 250px;
+}
+
+.main-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.after .icon {
+    color: white;
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+}
+
+.line.black {
+    background: black;
+}
+
+.icon.black h2 {
+    color: black;
+}
+
+.main-content p {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+/* Portfolio */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 188, 156, 0.8);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item .overlay .plus {
+    font-size: 60px;
+}
+
+/* About */
+.about-section {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Contact */
+.contact-section {
+    background-color: white;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #222;
+    color: white;
+}
+
+.social-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    transition: all 0.3s;
+}
+
+.social-circle:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}

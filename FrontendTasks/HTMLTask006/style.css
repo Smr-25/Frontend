@@ -1,0 +1,63 @@
+img,
+svg {
+    vertical-align: middle;
+    width: 500px;
+    height: auto;
+}
+
+header {
+    margin: 50px;
+}
+
+section {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+svg {
+    width: 50px;
+    height: 50px;
+}
+
+:root {
+    --my-gradient: linear-gradient(to right, #4facfe, #8f6bfe, #f093fb);
+}
+
+
+h6.badge {
+    background: var(--my-gradient) !important;
+    color: white !important;
+}
+
+
+#home h2 {
+    background: var(--my-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+h5{
+    color: black;
+}
+
+.profile {
+    background: var(--my-gradient) !important;
+    border-radius: 20px;
+    width: 500px;
+    height: auto;
+
+}
+
+
+#about {
+    background-color: #f1f1f1;
+    padding: 80px 0;
+    color: white;
+}
+
+
+#about h2 {
+    background: var(--my-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+

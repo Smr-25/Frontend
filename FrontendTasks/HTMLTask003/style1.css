@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+.container {
+    width: 85%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.text h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.text p {
+    margin: 0 0 10px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.text a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.invitation-card {
+    background: #fefefe;
+    width: 100%;
+    max-width: 450px;
+    padding: 80px 60px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+}
+
+.wedding-title {
+    font-family: 'Parisienne', cursive;
+    font-size: 102px;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    font-weight: 400;
+    transform: rotate(-15deg);
+    text-align: center;
+}
+
+.names {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.join-text {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.date {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.time {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.venue {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.reception {
+    font-family: 'Great Vibes', cursive;
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+}
+
+.parisienne-regular {
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,232 @@
+/* Ümumi Sıfırlama və Fontlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #fff; /* Əsasən ağ rəngdə mətn */
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Naviqasiya Çubuğu (Header) --- */
+.main-header {
+    background-color: transparent; /* Arxa planı şəffaf */
+    padding: 20px 0;
+    position: absolute; /* Hero-nun üzərində qalması üçün */
+    width: 100%;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo i {
+    color: #fff; /* Ürək ikonunun rəngi ağ */
+    margin-right: 5px;
+    font-size: 1.8rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+    margin-left: -100px; /* Naviqasiyanı bir az sola sürüşdürmək üçün */
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #38b4d8; /* Hover effekti */
+}
+
+.dropdown i {
+    font-size: 0.7rem;
+    margin-left: 3px;
+}
+
+.appointment-btn {
+    background-color: #fff;
+    color: #38b4d8; /* Mavi rəngdə mətn (şəkildəki kimi) */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.appointment-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Qəhrəman Bölməsi (Hero Section) --- */
+.hero-section {
+    background-color: #38b4d8; /* Əsas mavi fon rəngi */
+    background-image: linear-gradient(135deg, #38b4d8 0%, #1c7ba1 100%); /* Hafif gradient */
+    min-height: 100vh; /* Bütün ekranı tutsun */
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 100px; /* Header-in altında başlasın */
+    overflow: hidden; /* Maska kəsimi üçün */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.text-block {
+    max-width: 600px;
+    padding-bottom: 50px; /* Düymələr üçün yer */
+}
+
+.watermark-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 15rem; /* Çox böyük font ölçüsü */
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.1); /* Çox şəffaf ağ rəng */
+    line-height: 1;
+    transform: translateY(-50%);
+    pointer-events: none;
+    user-select: none;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem; /* Böyük başlıq */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 80%;
+    color: #e0f7fa; /* Açıq ağ rəng */
+    margin-bottom: 30px;
+}
+
+/* --- Alt Fəaliyyət Düymələri --- */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.envato-market {
+    background-color: #333; /* Qara/Tünd boz fon */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.envato-market p {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-bottom: 2px;
+}
+
+.envato-logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.envato-logo i {
+    color: #8bc34a; /* Yaşıl envato rəngi */
+    margin-right: 5px;
+}
+
+.presale-chat-btn {
+    background-color: #007bff; /* Mavi rəng */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.presale-chat-btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- Maska Şəkli (Placeholder) --- */
+.image-block {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.mask-placeholder {
+    /* Maskanın forma və ölçüsünü təqlid edir */
+    width: 500px;
+    height: 400px;
+    background: url('https://via.placeholder.com/500x400/FFFFFF/CCCCCC?text=Mask+Image') no-repeat center center; /* Açıq ağ rəngdə placeholder */
+    background-size: contain;
+    position: relative;
+    top: 50px; /* Şəkildə biraz aşağıda durur */
+}
+
+/* --- Sağ Tərəf Fəaliyyət Blokları --- */
+.side-action-blocks {
+    position: fixed;
+    right: 20px;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.demos-btn {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.demos-btn i {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+    color: #38b4d8;
+}

@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+}
+
+.section {
+    width: 85%;
+    margin: 80px auto;
+    display: flex;
+}
+
+
+.left {
+    width: 40%;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.title span {
+    font-weight: 300;
+    color: #555;
+}
+
+.color-line {
+    width: 120px;
+    height: 4px;
+    margin: 25px 0;
+    background: linear-gradient(to right, #0f9d58, #4285f4, #db4437, #f4b400);
+}
+
+.info {
+    color: #555;
+    font-size: 18px;
+    width: 90%;
+    line-height: 1.7;
+}
+
+
+.right {
+    width: 55%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid #e1e1e1;
+}
+
+.card {
+    padding: 40px 30px;
+    border: 1px solid #e1e1e1;
+    text-align: left;
+}
+
+.card svg {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+

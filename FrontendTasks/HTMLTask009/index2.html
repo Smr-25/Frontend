@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sidebar Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+        .sidebar{
+            width: 250px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar i{
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .sidebar ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li{
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .close{
+            transform: translate(-300px);
+            transition-duration: 0.3s;
+
+        }
+    </style>
+</head>
+<body>
+<button class="openSidebar">Open Sidebar</button>
+<div class="sidebar">
+    <i class="fa-solid fa-xmark icon" aria-hidden="true"></i>
+    <ul>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+        <li>lorem</li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="./script2.js"></script>
