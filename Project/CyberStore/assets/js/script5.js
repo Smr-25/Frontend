@@ -31,48 +31,41 @@ function displayCartItems() {
         return;
     }
 
-    let html = '<div class="cart-items-list">';
-
+    const list = document.createElement('div');
+    list.className = 'cart-items-list';
     cartItems.forEach((item, index) => {
-        const itemTotal = parseFloat(item.price.replace(/[^0-9.]/g, '')) * item.quantity;
-
-        html += `
-            <div class="cart-item" data-index="${index}">
-                <div class="cart-item-image">
-                    <img src="${item.image}" alt="${item.title}">
-                </div>
-                
-                <div class="cart-item-details">
-                    <h3 class="cart-item-title">${item.title}</h3>
-                    <div class="cart-item-price">${item.price}</div>
-                </div>
-                
-                <div class="cart-item-quantity">
-                    <button class="quantity-btn decrease" onclick="updateQuantity(${index}, -1)">
-                        <i class="fa-solid fa-minus"></i>
-                    </button>
-                    <input type="number" class="quantity-input" value="${item.quantity}" min="1" readonly>
-                    <button class="quantity-btn increase" onclick="updateQuantity(${index}, 1)">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                </div>
-                
-                <div class="cart-item-total">
-                    $${itemTotal.toFixed(2)}
-                </div>
-                
-                <button class="remove-from-cart" onclick="removeFromCart(${index})">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
+        const quantity = Number(item.quantity);
+        item.quantity = Number.isSafeInteger(quantity) && quantity > 0 ? quantity : 1;
+        const itemTotal = (parseFloat(String(item.price).replace(/[^0-9.]/g, '')) || 0) * item.quantity;
+        const card = document.createElement('div');
+        card.className = 'cart-item';
+        card.dataset.index = index;
+        card.innerHTML = `
+            <div class="cart-item-image"><img></div>
+            <div class="cart-item-details"><h3 class="cart-item-title"></h3><div class="cart-item-price"></div></div>
+            <div class="cart-item-quantity">
+                <button class="quantity-btn decrease" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                <input type="number" class="quantity-input" min="1" readonly aria-label="Quantity">
+                <button class="quantity-btn increase" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
             </div>
-        `;
+            <div class="cart-item-total"></div>
+            <button class="remove-from-cart" aria-label="Remove from cart"><i class="fa-solid fa-trash"></i></button>`;
+        const image = card.querySelector('img');
+        image.alt = item.title;
+        try {
+            const url = new URL(item.image, document.baseURI);
+            if (url.protocol === 'https:' || url.protocol === 'http:') image.src = url.href;
+        } catch { /* Invalid stored URLs remain unset. */ }
+        card.querySelector('.cart-item-title').textContent = item.title;
+        card.querySelector('.cart-item-price').textContent = item.price;
+        card.querySelector('.quantity-input').value = item.quantity;
+        card.querySelector('.cart-item-total').textContent = '$' + itemTotal.toFixed(2);
+        card.querySelector('.decrease').addEventListener('click', () => updateQuantity(index, -1));
+        card.querySelector('.increase').addEventListener('click', () => updateQuantity(index, 1));
+        card.querySelector('.remove-from-cart').addEventListener('click', () => removeFromCart(index));
+        list.appendChild(card);
     });
-
-    html += '</div>';
-
-    cartContainer.innerHTML = html;
-
-    // Update cart summary
+    cartContainer.replaceChildren(list);
     updateCartSummary();
 }
 

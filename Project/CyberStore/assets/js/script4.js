@@ -26,34 +26,33 @@ function displayWishlistItems() {
         return;
     }
 
-    let html = '<div class="wishlist-products-grid">';
-
+    const grid = document.createElement('div');
+    grid.className = 'wishlist-products-grid';
     wishlistItems.forEach((item, index) => {
-        html += `
-            <div class="wishlist-product-card" data-index="${index}">
-                <button class="remove-from-wishlist" onclick="removeFromWishlist(${index})">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                
-                <div class="wishlist-product-image">
-                    <img src="${item.image}" alt="${item.title}">
-                </div>
-                
-                <div class="wishlist-product-info">
-                    <h3 class="wishlist-product-title">${item.title}</h3>
-                    <div class="wishlist-product-price">${item.price}</div>
-                    
-                    <button class="wishlist-add-to-cart-btn" onclick="moveToCart(${index})">
-                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
-                    </button>
-                </div>
-            </div>
-        `;
+        const card = document.createElement('div');
+        card.className = 'wishlist-product-card';
+        card.dataset.index = index;
+        card.innerHTML = `
+            <button class="remove-from-wishlist" aria-label="Remove from wishlist"><i class="fa-solid fa-xmark"></i></button>
+            <div class="wishlist-product-image"><img></div>
+            <div class="wishlist-product-info">
+                <h3 class="wishlist-product-title"></h3>
+                <div class="wishlist-product-price"></div>
+                <button class="wishlist-add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+            </div>`;
+        const image = card.querySelector('img');
+        image.alt = item.title;
+        try {
+            const url = new URL(item.image, document.baseURI);
+            if (url.protocol === 'https:' || url.protocol === 'http:') image.src = url.href;
+        } catch { /* Invalid stored URLs remain unset. */ }
+        card.querySelector('.wishlist-product-title').textContent = item.title;
+        card.querySelector('.wishlist-product-price').textContent = item.price;
+        card.querySelector('.remove-from-wishlist').addEventListener('click', () => removeFromWishlist(index));
+        card.querySelector('.wishlist-add-to-cart-btn').addEventListener('click', () => moveToCart(index));
+        grid.appendChild(card);
     });
-
-    html += '</div>';
-
-    wishlistContainer.innerHTML = html;
+    wishlistContainer.replaceChildren(grid);
 }
 
 function removeFromWishlist(index) {
